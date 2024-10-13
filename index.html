@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+	<title>Mariam Ghamgui Portfolio</title>
+	
+	<!-- Meta -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Profolio Bootstrap 5 Template">
+	<meta name="author" content="Xiaoying Riley at 3rd Wave Media">    
+	<link rel="shortcut icon" href="favicon.ico"> 
+	
+	<!-- Google Fonts -->	
+	<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+	
+	<!-- Bootstrap Icons -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+	
+	<!-- FontAwesome JS -->
+    <script defer src="assets/fontawesome/js/all.js"></script>
+
+	<!-- Theme CSS -->  
+	<link id="theme-style" rel="stylesheet" href="assets/css/risen.css">
+	<link rel="stylesheet" href="assets/css/custom.css"> 
+
+	<!-- Bootstrap CSS -->
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- Bootstrap JS (with Popper.js) -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+	<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+	</script>
+	<script type="text/javascript">
+		(function(){
+		   emailjs.init({
+			 publicKey: "hYD7chuvbzd3C8DhP",
+		   });
+		})();
+	 </script>
+	 
+	<style>
+        /* Popup window styles */
+        #popupWindow {
+            display: none; 
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #1e2738; 
+            border: 1px solid #1b2332; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 30px;  
+            z-index: 1000; 
+            width: 500px;  
+            color: #ffffff;  
+        }
+        #overlay {
+            display: none;  
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);  
+            z-index: 999;  
+        }
+        .btn-danger {
+            background-color: #8497bc;  
+            border: none;  
+            color: #1e2738;  
+        }
+        .btn-danger:hover {
+            background-color: #6f85a3;  
+        }
+        .close-icon {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: #ffffff;  
+            cursor: pointer;  
+        }
+    </style>
+
+</head> 
+ 
+<body>
+	
+	<div class="container-fluid">
+			
+			<div class="main-content-wrapper">
+				<div class="container-fluid">
+					<div class="top-bar text-center position-relative">
+						<div class="top-bar-inner">
+							 
+							<a class="btn btn-primary top-bar-cta" onclick="togglePopup()">Contact Me</a>
+ 
+							<div id="overlay" onclick="togglePopup()"></div>
+ 
+							<div id="popupWindow">
+								<i class="bi bi-x close-icon" onclick="togglePopup()"></i>  
+								<h4>Get In Touch</h4>
+								<form id="contactForm">
+									<div class="mb-3">
+										<label for="username" class="form-label">Username</label>
+										<input type="text" class="form-control" name="username" id="username" placeholder="Enter your username" required>
+									</div>
+									<div class="mb-3">
+										<label for="email" class="form-label">Email</label>
+										<input type="email" class="form-control" name="email" id="email" placeholder="Enter your email" required>
+									</div>
+									<div class="mb-3">
+										<label for="phone" class="form-label">Phone</label>
+										<input type="tel" class="form-control" name="phone" id="phone" placeholder="Enter your phone number" required>
+									</div>
+									<div class="mb-3">
+										<label for="message" class="form-label">Message</label>
+										<textarea class="form-control" name="message" id="message" rows="3" placeholder="Enter your message" required></textarea>
+									</div>
+									<button type="button" class="btn btn-danger" onclick="sendEmail()">Send Message</button>
+								</form>
+							</div>
+							
+							<ul class="social-list list-inline mx-auto">
+								<li class="list-inline-item me-0 me-md-1 me-lg-2"><a href="https://mariam-ghamgui.github.io/"><i class="fa-solid fa-globe"></i></a></li>
+								<li class="list-inline-item me-0 me-md-1 me-lg-2"><a href="https://github.com/Mariam-Ghamgui"><i class="fa-brands fa-github fa-fw"></i></a></li>
+								
+								<li class="list-inline-item me-0 me-md-1 me-lg-2"><a href="https://www.linkedin.com/in/mariam-ghamgui/"><i class="fa-brands fa-linkedin-in fa-fw"></i></a></li>
+								
+							</ul><!--//social-list-->
+							
+						</div><!--//top-bar-inner-->
+						
+					</div><!--//top-bar-->
+			
+					<div class="resume-wrapper mx-auto rounded-2">
+						<div class="resume-header px-4 px-lg-5">
+							<div class="resume-profile-holder text-center">
+								<img class="resume-profile-pic rounded-circle" src="assets/images/profile.png" alt="image">
+								
+								<h2 class="resume-name text-uppercase">Mariam Ghamgui </h2>
+								<div class="resume-role-title text-uppercase">Industrial Computer Science Engineering Student</div>
+								<div class="text-center" style="margin-top: 20px;">
+									<a href="./CV_Mariam_Ghamgui .pdf" download class="btn" style="background-color: #8497bc; color: #1e2738;">Download CV</a>
+								</div>
+								 
+								<div class="resume-contact mt-4">
+									<ul class="resume-contact-list list-unstyled list-inline mb-0 justify-content-between">
+										<li class="list-inline-item me-md-3 me-lg-5"><i class="resume-contact-icon bi bi-telephone-inbound me-2"></i> +216-94882502</li>
+										<li class="list-inline-item me-md-3 me-lg-5"><i class="resume-contact-icon bi bi-envelope me-2"></i> mariam.ghamgui.workmail@gmail.com</li>
+										<li class="list-inline-item me-lg-5"><i class="resume-contact-icon bi bi-globe me-2"></i> www.mariam-ghamgui.github.io</li>
+										<li class="list-inline-item me-lg-5"><i class="resume-contact-icon bi bi-linkedin me-2"></i> www.linkedin.com/in/mariam-ghamgui</li>
+										<li class="list-inline-item me-lg-5"><i class="resume-contact-icon bi bi-github me-2"></i> www.github.com/Mariam-Ghamgui</li>
+									</ul>
+								</div><!--//resume-contact-->
+							</div><!--//profile-holder-->
+						</div><!--//resume-header-->
+						
+						<div class="resume-body p-4 p-lg-5">
+							<div class="row">
+								<div class="col-main col-12 col-lg-8 pe-lg-4">
+									<section class="resume-summary-section resume-section">
+										<h3 class="resume-section-heading text-uppercase py-2 py-lg-3 py-2 py-lg-3"><i class="resume-section-heading-icon bi bi-person me-2"></i>About Me</h3>
+										<div class="resume-summary-desc">
+											Motivated and resourceful student with a strong passion for problem-solving, innovation, and continuous learning. I am currently seeking a graduation internship where I can apply my skills and creativity in a dynamic, forward-thinking environment. I aim to collaborate with experts, contribute to impactful projects, and expand my expertise through hands-on experience in real-world challenges.										</div>
+									</section><!--//resume-section-->
+									
+									<hr>
+								 
+									<section class="resume-experience-section resume-section">
+										<h3 class="resume-section-heading text-uppercase py-2 py-lg-3 py-3"><i class="resume-section-heading-icon bi bi-briefcase me-2"></i>Work Experience</h3>
+										<div class="resume-timeline position-relative">
+										    <article class="resume-timeline-item position-relative pb-5">
+											    
+											    <div class="resume-timeline-item-header mb-2">
+												    
+												    <div class="resume-position-meta d-flex justify-content-between mb-1">
+													    <div class="resume-position-time">July 2024 – August 2024</div>
+													    <div class="resume-company-name">Doxso Technologies</div>
+												    </div>
+											        <h3 class="resume-position-title mb-1">Summer Intern - Assistant RAG-Llama</h3>
+
+											    </div><!--//resume-timeline-item-header-->
+											    <div class="resume-timeline-item-desc">
+												 
+												   
+												    <ul class="resume-timeline-list">
+													    <li>Researched methods for converting user intent into SQL queries and translating results into human-readable responses.</li>
+														<li>Applied LangChain and ChatOllama (Llama2) to enable the chatbot to process natural language inputs and deliver accurate database responses.</li>
+														<li>Developed and deployed the chatbot for the ENETCOM university website using Vue.js and Laravel.</li>
+												    </ul>
+												    
+											    </div><!--//resume-timeline-item-desc-->
+		
+										    </article><!--//resume-timeline-item-->
+
+											<article class="resume-timeline-item position-relative pb-5">
+											    
+											    <div class="resume-timeline-item-header mb-2">
+												    
+												    <div class="resume-position-meta d-flex justify-content-between mb-1">
+													    <div class="resume-position-time">July 2024 – August 2024</div>
+													    <div class="resume-company-name">Adhoc Althersis</div>
+												    </div>
+											        <h3 class="resume-position-title mb-1">Summer Intern - Exploring Observation Tools for Microservices</h3>
+
+											    </div><!--//resume-timeline-item-header-->
+											    <div class="resume-timeline-item-desc">
+												 
+												   
+												    <ul class="resume-timeline-list">
+													    <li>Researched methods for converting user intent into SQL queries and translating results into human-readable responses.</li>
+														<li>Applied LangChain and ChatOllama (Llama2) to enable the chatbot to process natural language inputs and deliver accurate database responses.</li>
+														<li>Developed and deployed the chatbot for the ENETCOM university website using Vue.js and Laravel.</li>
+												    </ul>
+												    
+											    </div><!--//resume-timeline-item-desc-->
+		
+										    </article><!--//resume-timeline-item-->
+
+										    <article class="resume-timeline-item position-relative">
+
+											    <div class="resume-timeline-item-header mb-2">
+												    
+												    <div class="resume-position-meta d-flex justify-content-between mb-1">
+													    <div class="resume-position-time">July 2023 – August 2023</div>
+													    <div class="resume-company-name">Adhoc Althersis</div>
+												    </div>
+											        <h3 class="resume-position-title mb-1">Summer Intern - Task Management Application(Kolab)</h3>
+
+											    </div><!--//resume-timeline-item-header-->
+											    <div class="resume-timeline-item-desc">
+												    <ul class="resume-timeline-list">
+													    
+													    <li>Created a task management application with React, incorporating animated interfaces.</li>
+														<li>Contributed to agile processes and used Notion for effective sprint planning and milestone tracking.</li>
+												    </ul>
+												    
+											    </div><!--//resume-timeline-item-desc-->
+		
+										    </article><!--//resume-timeline-item-->
+											 
+											<article class="resume-timeline-item position-relative pb-5">
+
+											    <div class="resume-timeline-item-header mb-2">
+												    
+												    <div class="resume-position-meta d-flex justify-content-between mb-1">
+													    <div class="resume-position-time">June 2023 – August 2023</div>
+													    <div class="resume-company-name">Sfax Digital Research Center</div>
+												    </div>
+											        <h3 class="resume-position-title mb-1">Summer Intern - Olive Supply Chain DApp</h3>
+
+											    </div><!--//resume-timeline-item-header-->
+											    <div class="resume-timeline-item-desc">
+												    <ul class="resume-timeline-list">
+													    
+													    <li>Researched Hyperledger and Ethereum to design and build smart contracts, automating transactions and ensuring transparency for an Olive Supply Chain Management DApp.</li>
+														<li>Developed the frontend with HTML and CSS, and integrated Web3.js for seamless communication with smart contracts.</li>
+												    </ul>
+												    
+											    </div><!--//resume-timeline-item-desc-->
+		
+										    </article><!--//resume-timeline-item-->
+							            </div><!--//resume-timeline-->
+									</section><!--//resume-experience-section-->
+
+									<section class="resume-experience-section resume-section">
+										<h3 class="resume-section-heading text-uppercase py-2 py-lg-3 py-3"><i class="resume-section-heading-icon bi bi-code-slash me-2"></i>Projects</h3>
+										<div class="resume-timeline position-relative">
+											<article class="resume-timeline-item position-relative pb-5">
+												<div class="resume-timeline-item-header mb-2">
+													<div class="resume-position-meta d-flex justify-content-between mb-1">
+														<div class="resume-position-time">November 2023 - April 2024</div>
+														<div class="resume-company-name">ENETCOM</div>
+													</div>
+													<h3 class="resume-position-title mb-1">End Of Year Project - Cloud-Native Chatbot</h3>
+												</div><!--//resume-timeline-item-header-->
+												<div class="resume-timeline-item-desc">
+													<ul class="resume-timeline-list">
+														<li>Developed and integrated a cloud-native chatbot with Rasa into the ENETCOM website, designing an intuitive user interface with HTML, CSS, and JavaScript.</li>
+														<li>Connected the chatbot to MongoDB for chat history and PostgreSQL for querying information.</li>
+														<li>Managed DevOps tasks, including Docker and Kubernetes setup, and implemented a CI/CD pipeline to streamline development and deployment processes.</li>
+													</ul>
+												</div><!--//resume-timeline-item-desc-->
+											</article><!--//resume-timeline-item-->
+										</div><!--//resume-timeline-->
+									</section><!--//resume-experience-section-->
+
+									<section class="resume-experience-section resume-section">
+										<h3 class="resume-section-heading text-uppercase py-2 py-lg-3 py-3"><i class="resume-section-heading-icon bi bi-heart me-2"></i>Volunteer Experience</h3>
+										<div class="resume-timeline position-relative">
+											<article class="resume-timeline-item position-relative pb-5">
+												<div class="resume-timeline-item-header mb-2">
+													<div class="resume-position-meta d-flex justify-content-between mb-1">
+														<div class="resume-position-time">September 2023 – June 2024</div>
+														<div class="resume-company-name">Google Developer Student Club (GDSC)</div>
+													</div>
+													<h3 class="resume-position-title mb-1">Web3.0 Department Lead</h3>
+												</div><!--//resume-timeline-item-header-->
+												<div class="resume-timeline-item-desc">
+													<ul class="resume-timeline-list">
+														<li>Taught and led weekly workshops on blockchain and web development, incorporating practical projects and quizzes to reinforce Web 3.0 concepts.</li>
+													</ul>
+												</div><!--//resume-timeline-item-desc-->
+											</article><!--//resume-timeline-item-->
+
+											<article class="resume-timeline-item position-relative pb-5">
+												<div class="resume-timeline-item-header mb-2">
+													<div class="resume-position-meta d-flex justify-content-between mb-1">
+														<div class="resume-position-time">October 2022 – June 2023</div>
+														<div class="resume-company-name">ENETCOM Junior Enterprise (ECJE)</div>
+													</div>
+													<h3 class="resume-position-title mb-1">Member</h3>
+												</div><!--//resume-timeline-item-header-->
+												<div class="resume-timeline-item-desc">
+													<ul class="resume-timeline-list">
+														<li>Member of the business development process, successfully secured 5 projects and one partnership, also served as Scrum Master for a web project.</li>
+													</ul>
+												</div><!--//resume-timeline-item-desc-->
+											</article><!--//resume-timeline-item-->
+
+											<article class="resume-timeline-item position-relative">
+												<div class="resume-timeline-item-header mb-2">
+													<div class="resume-position-meta d-flex justify-content-between mb-1">
+														<div class="resume-position-time">July 2022</div>
+														<div class="resume-company-name">Referendum</div>
+													</div>
+													<h3 class="resume-position-title mb-1">Assistant Chief of the Polling Station</h3>
+												</div><!--//resume-timeline-item-header-->
+												<div class="resume-timeline-item-desc">
+													<ul class="resume-timeline-list">
+														<li>Coordinated and supervised voting operations with the team at the polling station, ensuring compliance with electoral procedures.</li>
+													</ul>
+												</div><!--//resume-timeline-item-desc-->
+											</article><!--//resume-timeline-item-->
+										</div><!--//resume-timeline-->
+									</section><!--//resume-experience-section-->
+ 
+								</div><!--//col-8-->
+								<div class="col-12 col-lg-4 ps-lg-4">
+									
+									<section class="resume-skills-section resume-section">
+										<h3 class="resume-section-heading text-uppercase py-2 py-lg-3 py-3"><i class="resume-section-heading-icon bi bi-gear me-2"></i>Tech Stack</h3>
+										
+										<div class="item" style="margin-top: 1.5em; padding: 0.5em;">
+											<h6 class="item-heading"><i class="item-icon bi bi-circle-fill me-2" style="font-size: 0.7em;"></i><strong>Programming & Web Development:</strong></h6>
+											<div class="item-desc" style="font-weight: bold;">JavaScript, React.js, Vue.js, HTML, CSS, PHP, Laravel, Go, Python, Java, C, Node.js, J2EE</div>
+										</div><!--//item-->
+										
+										<div class="item" style="margin-top: 1.5em; padding: 0.5em;">
+											<h6 class="item-heading"><i class="item-icon bi bi-circle-fill me-2" style="font-size: 0.7em;"></i><strong>DevOps:</strong></h6>
+											<div class="item-desc" style="font-weight: bold;">Docker, Kubernetes, GitHub Actions, Git, GitHub, GitLab, Linux, Coroot, SigNoz, Netdata, JMeter</div>
+										</div><!--//item-->
+										
+										<div class="item" style="margin-top: 1.5em; padding: 0.5em;">
+											<h6 class="item-heading"><i class="item-icon bi bi-circle-fill me-2" style="font-size: 0.7em;"></i><strong>Cloud Computing:</strong></h6>
+											<div class="item-desc" style="font-weight: bold;">Huawei Cloud</div>
+										</div><!--//item-->
+										
+										<div class="item" style="margin-top: 1.5em; padding: 0.5em;">
+											<h6 class="item-heading"><i class="item-icon bi bi-circle-fill me-2" style="font-size: 0.7em;"></i><strong>Machine Learning/AI:</strong></h6>
+											<div class="item-desc" style="font-weight: bold;">Rasa, NLP, LangChain, Ollama LLaMA 2</div>
+										</div><!--//item-->
+										
+										<div class="item" style="margin-top: 1.5em; padding: 0.5em;">
+											<h6 class="item-heading"><i class="item-icon bi bi-circle-fill me-2" style="font-size: 0.7em;"></i><strong>Mobile Development:</strong></h6>
+											<div class="item-desc" style="font-weight: bold;">Java (android), Kotlin, XML</div>
+										</div><!--//item-->
+										
+										<div class="item" style="margin-top: 1.5em; padding: 0.5em;">
+											<h6 class="item-heading"><i class="item-icon bi bi-circle-fill me-2" style="font-size: 0.7em;"></i><strong>Database Management:</strong></h6>
+											<div class="item-desc" style="font-weight: bold;">MySQL, PostgreSQL, MongoDB</div>
+										</div><!--//item-->
+										
+										<div class="item" style="margin-top: 1.5em; padding: 0.5em;">
+											<h6 class="item-heading"><i class="item-icon bi bi-circle-fill me-2" style="font-size: 0.7em;"></i><strong>Blockchain Development:</strong></h6>
+											<div class="item-desc" style="font-weight: bold;">Smart Contracts, Ethereum, Solidity, DApps, Web3.js, Truffle Suite, Ganache</div>
+										</div><!--//item-->
+										
+										<div class="item" style="margin-top: 1.5em; padding: 0.5em;">
+											<h6 class="item-heading"><i class="item-icon bi bi-circle-fill me-2" style="font-size: 0.7em;"></i><strong>UI/UX Design:</strong></h6>
+											<div class="item-desc" style="font-weight: bold;">Figma, Adobe XD</div>
+										</div><!--//item-->
+										
+									</section><!--//resume-section-->
+									
+									<hr>
+									
+									<section class="resume-skills-section resume-section">
+										<h3 class="resume-section-heading text-uppercase py-2 py-lg-3 py-3"><i class="resume-section-heading-icon bi bi-person-gear me-2"></i>Soft Skills</h3>
+										<ul class="list-inline">
+								            <li class="list-inline-item"><span class="badge resume-skill-badge">Leadership</span></li>
+											<li class="list-inline-item"><span class="badge resume-skill-badge">Public Speaking</span></li>
+								            <li class="list-inline-item">
+								                <span class="badge resume-skill-badge">
+								                    Project Management: 
+								                    <span style="font-size: 0.9em; font-weight: normal;">Scrum, Lean Six Sigma</span>
+								                </span>
+								            </li>
+								            <li class="list-inline-item"><span class="badge resume-skill-badge">DevOps</span></li>
+								            
+							            </ul>
+									</section><!--//resume-section-->
+									
+									<hr>
+									 
+									<section class="resume-educate-section resume-section">
+										<h3 class="resume-section-heading text-uppercase py-2 py-lg-3 py-3"><i class="resume-section-heading-icon bi bi-book me-2"></i>Education</h3>
+										<ul class="list-unstyled">
+											<li class="mb-2">
+												<div class="resume-degree font-weight-bold">Engineering Diploma - Industrial Computer Science</div>
+												<div class="resume-degree-org">National School of Electronics and Telecommunications of Sfax – Enet’Com</div>
+												<div class="resume-degree-time">2022 - 2025</div>
+											</li>
+											<li class="mb-2">
+												<div class="resume-degree font-weight-bold">Pre-Engineering Studies – Physics/Chemistry</div>
+												<div class="resume-degree-org">Preparatory Institute for Engineering Studies - IPEIS</div>
+												<div class="resume-degree-time">2020 - 2022</div>
+											</li>
+
+										</ul>
+									</section><!--//resume-section-->
+									
+									<hr>
+
+									<section class="resume-certifications-section resume-section">
+										<h3 class="resume-section-heading text-uppercase py-2 py-lg-3 py-3">
+											<i class="resume-section-heading-icon bi bi-award me-2"></i>Certifications
+										</h3>
+										<ul class="list-unstyled">
+											<li class="mb-2">
+												<strong style="color: white;">KodeKloud:</strong> DevOps PreRequisite Course - Docker Training Course for the Absolute Beginner
+											</li>
+											<li class="mb-2">
+												<strong style="color: white;">Coursera:</strong> Blockchain Principles - Blockchain: Foundations and Use Cases - Smart Contract
+											</li>
+											<li class="mb-2">
+												<strong style="color: white;">Hashgraph Foundation:</strong> Hedera Developer
+											</li>
+										</ul>
+									</section><!--//resume-section-->
+									
+									<section class="resume-lang-section resume-section">
+										<h3 class="resume-section-heading text-uppercase py-2 py-lg-3 py-3"><i class="resume-section-heading-icon bi bi-translate me-2"></i>Languages</h3>
+										<ul class="list-unstyled resume-lang-list">
+											<li class="mb-2">
+												<div class="resume-lang-name">English</div>
+												<div class="resume-level-indicator row gx-0 flex-nowrap">
+													<div class="col"><span class="item item-full"></span></div>
+													<div class="col"><span class="item item-full"></span></div>
+													<div class="col"><span class="item item-full"></span></div>
+													<div class="col"><span class="item item-half"></span></div>
+												</div><!--//resume-level-indicator-->
+											</li>
+											<li class="mb-2">
+												<div class="resume-lang-name">French</div>
+												<div class="resume-level-indicator row gx-0 flex-nowrap">
+													<div class="col"><span class="item item-full"></span></div>
+													<div class="col"><span class="item item-full"></span></div>
+													<div class="col"><span class="item item-full"></span></div>
+													<div class="col"><span class="item item-half"></span></div>
+												</div><!--//resume-level-indicator-->
+											</li>
+											<li class="mb-2">
+												<div class="resume-lang-name">Italian</div>
+												<div class="resume-level-indicator row gx-0 flex-nowrap">
+													<div class="col"><span class="item item-full"></span></div>
+													<div class="col"><span class="item item-half"></span></div>
+													<div class="col"><span class="item"></span></div>
+													<div class="col"><span class="item"></span></div>
+												</div><!--//resume-level-indicator-->
+											</li>
+											<li class="mb-2"></li>
+												<div class="resume-lang-name">Arabic</div>
+												<div class="resume-level-indicator row gx-0 flex-nowrap">
+													<div class="col"><span class="item item-full"></span></div>
+													<div class="col"><span class="item item-full"></span></div>
+													<div class="col"><span class="item item-full"></span></div>
+													<div class="col"><span class="item item-full"></span></div>
+												</div><!--//resume-level-indicator-->
+											</li>
+										</ul>
+									</section><!--//resume-section-->
+									
+									<section class="resume-interests-section resume-section">
+										<h3 class="resume-section-heading text-uppercase py-2 py-lg-3 py-3">
+											<i class="resume-section-heading-icon bi bi-star me-2"></i>Interests
+										</h3>
+										<ul class="list-unstyled">
+											<li class="mb-2">
+												<i class="bi bi-laptop"></i> Front-end development with a focus on fidelity to UI/UX designs
+											</li>
+											<li class="mb-2">
+												<i class="bi bi-music-note"></i> Music (guitar)
+											</li>
+											<li class="mb-2">
+												<i class="bi bi-basket"></i> Entrepreneurship (crochet and embroidery)
+											</li>
+										</ul>
+									</section><!--//resume-section-->
+									
+								</div><!--//col-side-->
+							</div><!--//row-->
+					    </div><!--//resume-body-->
+				    </div><!--//resume-wrapper-->
+				</div><!--//container-fluid-->
+			</div><!--//main-content-wrapper-->
+		 
+		</div><!--//row-->
+	
+	</div><!--//container-->
+	
+	<footer class="footer text-center py-4">
+		<!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
+		<small class="copyright">Designed with <span class="sr-only">love</span><i class="bi bi-heart-fill" style="color:#fe655c"></i> by <a class="theme-link" href="http://themes.3rdwavemedia.com" target="_blank">Mariam Ghamgui</a> </small>
+	</footer>
+
+	<script>
+        function togglePopup() {
+            var popup = document.getElementById("popupWindow");
+            var overlay = document.getElementById("overlay");
+            if (popup.style.display === "none" || popup.style.display === "") {
+                popup.style.display = "block";
+                overlay.style.display = "block";
+            } else {
+                popup.style.display = "none";
+                overlay.style.display = "none";
+            }
+        } 
+        function sendEmail() {
+            const username = document.getElementById('username').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const message = document.getElementById('message').value;
+
+            emailjs.send("service_zvo8zdr", "template_lrhgl5h",{
+                username: username,
+                email: email,
+                phone: phone,
+                message: message
+            })
+            .then(function(response) {
+                console.log('SUCCESS!', response.status, response.text);
+                alert('Message sent successfully!\n\n' + message);
+                togglePopup();  
+            }, function(error) {
+                console.log('FAILED...', error);
+                alert('Failed to send message. Please try again.');
+            });
+        }
+    </script>
+</body>
